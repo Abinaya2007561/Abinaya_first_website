@@ -11,30 +11,29 @@ function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [userEmail, setUserEmail] = useState('');
 
-  const pebbleColors = [
-    '#f0c7a1',
-    '#d8b4a6',
-    '#b5d6a8',
-    '#8fc8ff',
-    '#f3b0c3',
-    '#ffe2b3',
-    '#d9e6c3',
-    '#dab1ff',
-    '#ffc4d8',
-    '#b8f1d3',
-    '#fbcf8f',
-    '#c9d4ff',
-    '#ead3d2',
-    '#ffdb9c',
-    '#a7c9c5',
-    '#d9b4ff',
-    '#f7c8b6',
-    '#c6f0f7',
-    '#ffb2a8',
-    '#d7e6a1',
-  ];
-
   const pebbleStyles = useMemo(() => {
+    const pebbleColors = [
+      '#f0c7a1',
+      '#d8b4a6',
+      '#b5d6a8',
+      '#8fc8ff',
+      '#f3b0c3',
+      '#ffe2b3',
+      '#d9e6c3',
+      '#dab1ff',
+      '#ffc4d8',
+      '#ffb2a8',
+      '#b8f1d3',
+      '#fbcf8f',
+      '#c9d4ff',
+      '#ead3d2',
+      '#ffdb9c',
+      '#a7c9c5',
+      '#d9b4ff',
+      '#f7c8b6',
+      '#c6f0f7',
+      '#d7e6a1',
+    ];
     const count = 62;
     return Array.from({ length: count }, (_, index) => {
       const size = Math.floor(Math.random() * 20) + 10;
@@ -56,7 +55,7 @@ function App() {
         },
       };
     });
-  }, [pebbleColors]);
+  }, []);
   
   // Login form state
   const [loginData, setLoginData] = useState({ email: '', password: '' });
